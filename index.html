@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta http="X-UA-Compatible" conttent="IE=edge,chrome=1">
+	<meta charset="utf-8">
+	<title>GeoMacMap</title>
+	<meta name="description" content="Demo app showing how to compose a loosely coupled mapping application using Backbone.Marionette">
+	<meta name="author" content="Dave Bouman / DTSAgile.com">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0">
+	<link href='https://fonts.googleapis.com/css?family=Oxygen:300,700' rel='stylesheet' type='text/css'>
+
+	<link href="http://serverapi.arcgisonline.com/jsapi/arcgis/3.0/js/esri/css/esri.css" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" type="text/css" href="./css/viewer.css"/>
+</head>
+<body>
+	<div class="navbar">
+		<a class="logo" href="#">
+			<span class='entypo-rocket'></span>
+		</a>
+		<div id="current-item" class="item cursorpointer">
+			<span id="current-item-name"></span>
+			<span id="menu-widget" class="entypo-plus-circled"></span>
+			<span id="feedback" style="display:none">
+				<div id="working" class="entypo-cw spin"></div>
+				<span id="actions"></span>
+			</span>
+		</div>
+		<!-- This will contain the legends later on -->
+		<div id="horizontal-legend-region"></div>
+		<!-- These are the tools on the upper right. -->
+		<div id="tool-list-region" class="item-right"></div>
+	</div>
+
+	<!-- Container for the "Drop Down List of Views" -->
+	<div id="menu-region" style="display:none;" class="view"></div>
+
+	<!-- Container for the Layer List -->
+	<div id="layer-list-region"
